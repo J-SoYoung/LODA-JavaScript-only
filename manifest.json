@@ -1,7 +1,0 @@
-{
-  "display": "standalone",
-  "icons": [{"src": "/contents/images/_icon.png", "sizes": "512x512", "type": "image/png"}],
-  "short_name": "bimilo",
-  "start_url": "/",
-  "theme_color": "white"
-}
