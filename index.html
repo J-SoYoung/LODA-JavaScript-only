@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="icon" href="/contents/images/_icon.svg">
+        <title>bimilo</title>
+
+        <link rel="manifest" href="/manifest.json">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+        <script type="module">
+            // imports
+            import {Start} from "/app.mjs";
+            // call the first function Start asynchronously
+            window.onload = async () => {await Start();}
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
