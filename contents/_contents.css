@@ -1,0 +1,48 @@
+@font-face {
+	font-family: 'SOYOMapleBoldTTF';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Orbit-Regular';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+a{
+  text-decoration: none;
+}
+a:active, a:visited{
+  color: inherit;
+}
+body{
+	max-width: 450px;
+	height: 100%;
+	margin: 0;
+	font-family: 'Orbit-Regular';
+}
+h1,h2,h3,h4 { 
+	margin: 0; 
+	padding: 0;
+	letter-spacing: -3px;
+	font-family: 'SOYOMapleBoldTTF';
+}
+h1 {
+	margin-bottom: 20px;
+	font-size: 32px;
+	color: #0E4F3D;
+}
+p{
+	margin: 0; 
+	padding: 0;
+}
+button{
+	font-family: 'SOYOMapleBoldTTF';
+	letter-spacing: -1px;
+}
