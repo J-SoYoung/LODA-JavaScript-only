@@ -54,29 +54,33 @@ async function ShowContent(ContentName)
 	}
 }
 
+async function ShowSubContent(SubContentName)
+{
+	document.getElementById('main_contents').innerHTML = await (await fetch('/contents/' + SubContentName + '.html')).text();
+}
+
 function El_Click(event)
 {
 	switch(event.target.id)
 	{
 		case'loginpage_move_btn':
-			alert('왜안넘어가지')
-			ShowContent('loginPage');
+			ShowContent('p_login');
 			break;
 
 		case'homepage_move':
-			ShowContent('homePage');
+			ShowContent('p_home');
 			break;
 
 		case'postpage_move_btn':
-			ShowContent('postPage');
+			ShowSubContent('c_post');
 			break;
 
 		case'calendar_view_btn':
-			ShowContent('calendar');
+			ShowSubContent('c_calendar');
 			break;
 
 		case'list_view_btn':
-			ShowContent('homePage');
+			ShowContent('p_home');
 			break;
 	}
 }
