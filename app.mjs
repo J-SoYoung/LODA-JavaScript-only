@@ -34,7 +34,6 @@ async function ShowContent(ContentName)
 {
   // fill body
   window.document.body.innerHTML = await (await fetch('/contents/' + ContentName + '.html')).text();
-d
 	//homeapge의 header, footer 사이의 content에 데이터를 넣고싶다. 위랑 비슷하게 할 수 있을 것 같은데
 
 	// do things
