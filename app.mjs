@@ -60,6 +60,7 @@ function El_Click(event)
 	switch(event.target.id)
 	{
 		case'loginpage_move_btn':
+			alert('왜안넘어가지')
 			ShowContent('loginPage');
 			break;
 
