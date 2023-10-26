@@ -67,18 +67,21 @@ function El_Click(event)
 			break;
 
 		case'main_logo_btn':
+			alert('메인로고 메인으로가라')
 			document.getElementById('home_section').style.display = '';
 			document.getElementById('post_section').style.display = 'none';
 			document.getElementById('calendar_section').style.display = 'none';
 			break;
 
 		case'postpage_move_btn':
+			alert('postv보여ㅜ저라')
 			document.getElementById('home_section').style.display = 'none';
 			document.getElementById('post_section').style.display = '';
 			document.getElementById('calendar_section').style.display = 'none';
 			break;
 
 		case'calendar_view_btn':
+			alert('캘린더보여주라')
 			document.getElementById('home_section').style.display = 'none';
 			document.getElementById('post_section').style.display = 'none';
 			document.getElementById('calendar_section').style.display = '';
