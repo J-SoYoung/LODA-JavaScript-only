@@ -27,7 +27,7 @@ export async function Start()
 		ShowContent('welcome');
 		return;
 	} 
-	ShowContent('config');
+	ShowContent('p_config');
 }
 
 async function ShowContent(ContentName)
@@ -38,15 +38,15 @@ async function ShowContent(ContentName)
 
 	// do things
 	switch(ContentName){
-		case 'config':
+		case 'p_config':
 			document.getElementById('loginpage_move_btn').addEventListener('click',El_Click);
 			break;
 
-		case 'loginPage':
+		case 'p_login':
 			document.getElementById('homepage_move').addEventListener('click',El_Click);
 			break;
 
-		case 'homePage':
+		case 'p_home':
 			document.getElementById('postpage_move_btn').addEventListener('click',El_Click);
 			document.getElementById('calendar_view_btn').addEventListener('click',El_Click);
 			document.getElementById('list_view_btn').addEventListener('click',El_Click);
