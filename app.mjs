@@ -23,7 +23,7 @@
 export async function Start()
 {
 	// check if not PWA
-	if (window.matchMedia('display-mode: standalone').matches == false){
+	if (window.matchMedia('(display-mode: standalone)').matches == false){
 		ShowContent('welcome');
 		return;
 	} 
