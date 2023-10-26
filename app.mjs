@@ -68,7 +68,7 @@ function El_Click(event)
 
 		case'main_logo_btn':
 			alert('메인로고 메인으로가라')
-			document.getElementById('home_section').style.display = '';
+			document.getElementById('home_section').style.display = 'block';
 			document.getElementById('post_section').style.display = 'none';
 			document.getElementById('calendar_section').style.display = 'none';
 			break;
@@ -76,7 +76,7 @@ function El_Click(event)
 		case'postpage_move_btn':
 			alert('postv보여ㅜ저라')
 			document.getElementById('home_section').style.display = 'none';
-			document.getElementById('post_section').style.display = '';
+			document.getElementById('post_section').style.display = 'block';
 			document.getElementById('calendar_section').style.display = 'none';
 			break;
 
@@ -84,11 +84,11 @@ function El_Click(event)
 			alert('캘린더보여주라')
 			document.getElementById('home_section').style.display = 'none';
 			document.getElementById('post_section').style.display = 'none';
-			document.getElementById('calendar_section').style.display = '';
+			document.getElementById('calendar_section').style.display = 'block';
 			break;
 
 		case'list_view_btn':
-			document.getElementById('home_section').style.display = '';
+			document.getElementById('home_section').style.display = 'block';
 			document.getElementById('post_section').style.display = 'none';
 			document.getElementById('calendar_section').style.display = 'none';
 			break;
