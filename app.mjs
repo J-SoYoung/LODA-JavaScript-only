@@ -22,8 +22,9 @@ registerServiceWorker();
 // window onload 후 함수 실행
 export async function Start(){
 	// check if not PWA
-	if (window.matchMedia('display-mode: standalone').matches == false)
-	alert('PWA를 설치하세요', window.matchMedia('display-mode: standalone').matches)
+	if (window.matchMedia('display-mode: standalone').matches == false){
+		alert('PWA를 설치하세요', window.matchMedia('display-mode: standalone').matches)
+	} else { alert('PWA설치했다')}
   // ShowContent('welcome');
 }
 
