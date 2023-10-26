@@ -1,24 +1,24 @@
 // service-worker 등록.
-async function registerServiceWorker()
-{
-	if ("serviceWorker" in navigator) {
-		try {
-			const registration = await navigator.serviceWorker.register("/servive_worker.js", {
-				scope: "/",
-			});
-			if (registration.installing) {
-				alert('Service worker installing')
-			} else if (registration.waiting) {
-				alert('Service worker waiting')
-			} else if (registration.active) {
-				alert('Service worker active')
-			}
-		} catch (error) {
-			alert(`Registration failed with ${error}`)
-		}
-	}
-}
-registerServiceWorker();
+// async function registerServiceWorker()
+// {
+// 	if ("serviceWorker" in navigator) {
+// 		try {
+// 			const registration = await navigator.serviceWorker.register("/servive_worker.js", {
+// 				scope: "/",
+// 			});
+// 			if (registration.installing) {
+// 				alert('Service worker installing')
+// 			} else if (registration.waiting) {
+// 				alert('Service worker waiting')
+// 			} else if (registration.active) {
+// 				alert('Service worker active')
+// 			}
+// 		} catch (error) {
+// 			alert(`Registration failed with ${error}`)
+// 		}
+// 	}
+// }
+// registerServiceWorker();
 
 export async function Start()
 {

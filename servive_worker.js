@@ -1,3 +1,4 @@
+
 // self.addEventListener("activate", Event => Handle_activate(Event));
 // self.addEventListener("fetch", Event => Handle_fetch(Event));
 // self.addEventListener("install", Event => Handle_install(Event));
