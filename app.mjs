@@ -27,26 +27,26 @@ export async function Start()
 		ShowContent('welcome');
 		return;
 	} 
-	ShowContent('p_config');
+	ShowContent('config');
 }
 
 async function ShowContent(ContentName)
 {
   // fill body
   window.document.body.innerHTML = await (await fetch('/contents/' + ContentName + '.html')).text();
-	//homeapge의 header, footer 사이의 content에 데이터를 넣고싶다. 위랑 비슷하게 할 수 있을 것 같은데
 
 	// do things
 	switch(ContentName){
-		case 'p_config':
+		case 'config':
 			document.getElementById('loginpage_move_btn').addEventListener('click',El_Click);
 			break;
 
-		case 'p_login':
+		case 'loginpage':
 			document.getElementById('homepage_move').addEventListener('click',El_Click);
 			break;
 
-		case 'p_home':
+		case 'homepage':
+			document.getElementById('main_logo_btn').addEventListener('click',El_Click);
 			document.getElementById('postpage_move_btn').addEventListener('click',El_Click);
 			document.getElementById('calendar_view_btn').addEventListener('click',El_Click);
 			document.getElementById('list_view_btn').addEventListener('click',El_Click);
@@ -54,33 +54,40 @@ async function ShowContent(ContentName)
 	}
 }
 
-async function ShowSubContent(SubContentName)
-{
-	document.getElementById('main_contents').innerHTML = await (await fetch('/contents/' + SubContentName + '.html')).text();
-}
-
 function El_Click(event)
 {
 	switch(event.target.id)
 	{
 		case'loginpage_move_btn':
-			ShowContent('p_login');
+			ShowContent('loginpage');
 			break;
 
 		case'homepage_move':
-			ShowContent('p_home');
+			ShowContent('homepage');
+			break;
+
+		case'main_logo_btn':
+			document.getElementById('home_section').style.display = '';
+			document.getElementById('post_section').style.display = 'none';
+			document.getElementById('calendar_section').style.display = 'none';
 			break;
 
 		case'postpage_move_btn':
-			ShowSubContent('c_post');
+			document.getElementById('home_section').style.display = 'none';
+			document.getElementById('post_section').style.display = '';
+			document.getElementById('calendar_section').style.display = 'none';
 			break;
 
 		case'calendar_view_btn':
-			ShowSubContent('c_calendar');
+			document.getElementById('home_section').style.display = 'none';
+			document.getElementById('post_section').style.display = 'none';
+			document.getElementById('calendar_section').style.display = '';
 			break;
 
 		case'list_view_btn':
-			ShowContent('p_home');
+			document.getElementById('home_section').style.display = '';
+			document.getElementById('post_section').style.display = 'none';
+			document.getElementById('calendar_section').style.display = 'none';
 			break;
 	}
 }

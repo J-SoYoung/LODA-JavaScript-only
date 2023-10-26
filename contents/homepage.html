@@ -33,11 +33,30 @@
     background-color: white;
     cursor: pointer;
   }
+
+  /* main-section */
+  #main_contents section {
+    border: 1px solid red;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  #home_section {
+    display: ""
+  }
+
+  #calendar_section {
+    display: none;
+  }
+
+  #post_section {
+    display: none;
+  }
 </style>
 
 <div class="contents_box">
   <header>
-    <img src="/contents/images/logo_main.svg" id="homepage_move_btn" alt="logo" width="120px" />
+    <img src="/contents/images/logo_main.svg" id="main_logo_btn" alt="logo" width="120px" />
     <div class="view_button_box">
       <img src="/contents/images/icon_list.svg" id="list_view_btn" alt="list_view" width="30px" />
     </div>
@@ -47,8 +66,18 @@
   </header>
 
   <main id="main_contents">
-    <h1>homepage</h1>
-    <img src="/contents/images/icon_plus.svg" id="postpage_move_btn" alt="postAdd_icon" width="40px" height="40px" />
+    <section id="home_section">
+      <h1>homepage</h1>
+      <img src="/contents/images/icon_plus.svg" id="postpage_move_btn" alt="postAdd_icon" width="40px" height="40px" />
+    </section>
+    <section id="calendar_section">
+      <h1>calendar</h1>
+    </section>
+    <section id="post_section">
+      <h1>postpage</h1>
+      <input />
+      <button>추가</button>
+    </section>
   </main>
-  
+
 </div>
