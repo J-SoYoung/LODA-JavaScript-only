@@ -1,5 +1,6 @@
 // service-worker 등록.
-async function registerServiceWorker(){
+async function registerServiceWorker()
+{
 	if ("serviceWorker" in navigator) {
 		try {
 			const registration = await navigator.serviceWorker.register("/servive_worker.js", {
@@ -19,19 +20,43 @@ async function registerServiceWorker(){
 }
 registerServiceWorker();
 
-// window onload 후 함수 실행
-export async function Start(){
-	alert('ddd')
-
+export async function Start()
+{
 	// check if not PWA
 	if (window.matchMedia('display-mode: standalone').matches == false){
-		alert('PWA를 설치하세요', window.matchMedia('display-mode: standalone').matches)
-	} else { alert('PWA설치했다')}
-	
-  // ShowContent('welcome');
+		ShowContent('welcome');
+		return;
+	} 
+	ShowContent('config');
 }
 
-async function ShowContent(ContentName){
+async function ShowContent(ContentName)
+{
   // fill body
   window.document.body.innerHTML = await (await fetch('/contents/' + ContentName + '.html')).text();
+
+	// do things
+	switch(ContentName){
+		case 'config':
+			document.getElementById('loginpage_move_btn').addEventListener('click',El_Click);
+			break;
+
+		case 'loginPage':
+			document.getElementById('homepage_move').addEventListener('click',El_Click);
+			break;
+	}
+}
+
+function El_Click(event)
+{
+	switch(event.target.id)
+	{
+		case'loginpage_move_btn':
+			ShowContent('loginPage');
+			break;
+
+		case'homepage_move':
+			ShowContent('homePage');
+			break;
+	}
 }
